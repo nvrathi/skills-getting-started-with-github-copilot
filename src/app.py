@@ -11,6 +11,9 @@ from fastapi.responses import RedirectResponse
 import os
 from pathlib import Path
 
+# Constants
+MAX_PARTICIPANTS_GYM_CLASS = 35
+
 app = FastAPI(title="Mergington High School API",
               description="API for viewing and signing up for extracurricular activities")
 
@@ -36,7 +39,7 @@ activities = {
     "Gym Class": {
         "description": "Physical education and sports activities",
         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
-        "max_participants": 35,
+        "max_participants": MAX_PARTICIPANTS_GYM_CLASS,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
     }
 }
